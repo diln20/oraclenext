@@ -20,11 +20,22 @@
 
     function calcularIMC(nombre,peso, altura){
         var imc = peso / (altura * altura);
-        return  imprimir("El IMC de "+nombre+" es de: " +Math.round(imc));
+            if(imc<18.5){
+                imprimir("El IMC de "+nombre+" esta abajo de lo recomendado");
+            };
+            if(imc>=18.5 && imc<25){
+                imprimir("El IMC de "+nombre+" esta dentro de lo recomendado");
+            };
+            if(imc>=25.0 && imc<30){
+                imprimir("El IMC de "+nombre+" esta dentro de lo normal ");
+            };
+            if(imc>=30){
+                imprimir("El IMC de "+nombre+" es considerado como sobrepeso");
+            };
     }
     
     calcularIMC("Christian",71, 1.72);
-    calcularIMC(prompt("Ingresa tu nombre"),prompt("Ingresa tu peso"),prompt("Ingresa tu altura"));
+    calcularIMC(nombre=prompt("Ingresa tu nombre"),prompt(nombre+",Ingresa tu peso: "),prompt("Ingresa tu altura"));
     </script>
 
 
