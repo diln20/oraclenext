@@ -1,0 +1,42 @@
+<meta charset="UTF-8">
+<!DOCTYPE html>
+<html lang="en">
+
+
+<script>
+    function saltoDeLinea() {
+        document.write("<br>");  
+        document.write("<br>");  
+        document.write("<br>");  
+        document.write("<br>");  
+        document.write("<br>");  
+    }
+    
+    function imprimir(frase){
+        document.write(frase);
+        saltoDeLinea();
+    }
+    
+
+    function calcularIMC(nombre,peso, altura){
+        var imc = peso / (altura * altura);
+        return  imprimir("El IMC de "+nombre+" es de: " +Math.round(imc));
+    }
+    
+    calcularIMC("Christian",71, 1.72);
+    calcularIMC(prompt("Ingresa tu nombre"),prompt("Ingresa tu peso"),prompt("Ingresa tu altura"));
+    </script>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
